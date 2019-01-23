@@ -24,7 +24,7 @@ SOURCES += \
 #    flight_control_sample.cpp \
 
 
-DJI_ROOT = /home/miguel/rep18/hsfl-dji/Onboard-SDK-3.6.1/
+DJI_ROOT = ./Onboard-SDK-3.6.1/
 
 # 3. Their header files (libraries headers, include the path to headers)
 INCLUDEPATH += $$DJI_ROOT/osdk-core/api/inc
@@ -44,12 +44,35 @@ HEADERS += \
         $$DJI_ROOT/sample/linux/common/*.hpp
 
 SOURCES += \
-        $$DJI_ROOT/osdk-core/api/src/*.cpp \
-        $$DJI_ROOT/osdk-core/protocol/src/*.cpp \
-        $$DJI_ROOT/osdk-core/hal/src/*.cpp \
-        $$DJI_ROOT/osdk-core/utility/src/*.cpp \
-        $$DJI_ROOT/osdk-core/platform/linux/src/*.cpp \
-        $$DJI_ROOT/osdk-core/platform/default/src/*.cpp \
-        $$DJI_ROOT/sample/linux/common/*.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_ack.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_broadcast.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_camera.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_command.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_control.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_error.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_gimbal.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_hardware_sync.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_hotpoint.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_mfio.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_mission_manager.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_mobile_communication.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_subscription.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_vehicle.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_version.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_virtual_rc.cpp \
+        $$DJI_ROOT/osdk-core/api/src/dji_waypoint.cpp \
+        $$DJI_ROOT/osdk-core/protocol/src/dji_aes.cpp \
+        $$DJI_ROOT/osdk-core/protocol/src/dji_open_protocol.cpp \
+        $$DJI_ROOT/osdk-core/protocol/src/dji_protocol_base.cpp \
+        $$DJI_ROOT/osdk-core/hal/src/dji_hard_driver.cpp \
+        $$DJI_ROOT/osdk-core/hal/src/dji_log.cpp \
+        $$DJI_ROOT/osdk-core/hal/src/dji_memory.cpp \
+        $$DJI_ROOT/osdk-core/hal/src/dji_platform_manager.cpp \
+        $$DJI_ROOT/osdk-core/hal/src/dji_thread_manager.cpp \
+        $$DJI_ROOT/osdk-core/utility/src/dji_circular_buffer.cpp \
+        $$DJI_ROOT/osdk-core/utility/src/dji_singleton.cpp \
+        $$DJI_ROOT/osdk-core/platform/linux/src/linux_serial_device.cpp \
+        $$DJI_ROOT/osdk-core/platform/default/src/dji_memory_default.cpp \
+        $$DJI_ROOT/sample/linux/common/dji_linux_environment.cpp \
         $$DJI_ROOT/sample/linux/flight-control/flight_control_sample.cpp
 #LIBS +=
